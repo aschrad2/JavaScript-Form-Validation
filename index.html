@@ -1,0 +1,34 @@
+<link rel="stylesheet" src="main.css">
+
+<form action="" onsubmit = "return verify()" method="POST">
+
+<!--Input #1-->
+<input id="username" name="username" type="text">Enter your name</input>
+
+<!--Error messages-->
+<p id="validationMessage" hidden>Number must be between 40-90</p>
+<p id="nanMessage" hidden>Please enter a numeric value</p>
+
+<!--Input #2-->
+<input id="number" name="number" type="text">Enter a number between 40-90</input>
+
+<!--Submit button-->
+<input type="submit"></input>
+
+</form>
+
+<script src="app.js"></script>
+
+
+<!--
+
+Explanation
+This example uses a form element that contains 2 input fields and a submit element.
+
+Validating with the change event
+We create a handler for the number input's change event. In this function, we use the isNaN function to check whether or not the input is numeric. If it isn't, we show the error message. If it is, we hide that message.
+
+Validating with form submit event
+We create a function called verify that is called when the form's submit event fires. In this function, we verify that the number the user inputs is in the specified range. If it isn't, we display an error message and return false. Returning false prevents the form from sending the data. Otherwise, we return true and the form is submitted.
+
+-->
